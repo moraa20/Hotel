@@ -1,0 +1,218 @@
+.special-offers,
+.testimonials,
+.rooms,
+.restaurant,
+.contact {
+
+    text-align: center;
+    place-items: center;
+    font-family: sans-serif;
+    color: black;
+
+}
+
+
+.special-offers {
+    height: 50vh;
+}
+
+.testimonials {
+    height: 20vh;
+    font-style: italic;
+    margin-top: 80px;
+
+
+}
+
+.contact {
+    height: 30vh;
+    font-style: italic;
+
+
+}
+
+.about-us h2,
+.special-offers h2,
+.testimonials h2,
+.rooms h2,
+.restaurant h2,
+.contact h2 {
+
+    font-size: 1.5em;
+    font-style: italic;
+    font-size: xx-large;
+    color: black;
+
+
+}
+
+.special-offers .offer,
+.testimonials .review,
+.contact-us .contact,
+.my-restaurant .restaurant,
+.my-rooms .rooms,
+.about-us .container {
+    margin: auto;
+
+
+}
+
+.special-offers .offer h3,
+.testimonials .review p,
+.contact-us .contact,
+.my-restaurant .restaurant,
+.my-rooms .rooms,
+.about-us .container {
+    margin: auto;
+}
+
+.about-us {
+
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+
+
+
+}
+
+.about-container {
+    padding: 65px;
+    flex: 1;
+    color: black;
+    background-color: white;
+    font-style: italic;
+    border-style: outset;
+    border-radius: 10px;
+}
+
+.special-offers {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.container {
+    flex: 1;
+    color: #000;
+    background-color: #fff;
+
+
+}
+
+.offers-container {
+    
+    flex: 1;
+    font-style: italic;
+    border-style: outset;
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.hotel-image {
+    flex: 1;
+    text-align: center;
+
+}
+
+.hotel-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+
+
+}
+
+.offer-image {
+    flex: 1;
+    max-width: 100%;
+
+
+}
+
+.offer-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+
+.my-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+}
+
+.my-restaurant,
+.my-rooms {
+    flex: 1;
+    max-width: 100%;
+    font-style: italic;
+    border-radius: 10px;
+
+
+}
+
+.my-restaurant {
+    background-color: white;
+    color: black;
+    border-style: outset;
+    padding: 50px;
+
+}
+
+.my-rooms {
+    background-color: white;
+    color: black;
+    border-style: outset;
+    padding: 42px;
+}
+
+@media(max-width:768px) {
+    .my-container {
+        flex-direction: column;
+    }
+}
+
+.book-button {
+    background-color: gold;
+    color: #000;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.book-button:hover {
+    background-color: yellow;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+}
+
+.content {
+    margin: auto;
+}

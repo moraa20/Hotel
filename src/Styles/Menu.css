@@ -1,0 +1,75 @@
+.menu-container {
+    
+    display: flex;
+    align-items: flex-start;
+    gap: 1px;
+    color: gold;
+    background-color: #000;
+    border: 6px solid gold;
+    border-radius: 20px;
+    
+}
+
+.menu {
+    flex: 1;
+    border-right-style: double;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu h2 {
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+    font-style: italic;
+
+}
+
+.menu ul {
+    list-style-type: none;
+    
+}
+
+.menu li {
+    margin-bottom: 20px;
+}
+
+.menu h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.menu p {
+    margin: 5px 0;
+    font-style: italic;
+}
+
+.food-images {
+
+    flex: 1;
+    display:flex;
+    flex-flow: wrap;
+    padding: 50px
+   
+    
+    ;
+}
+
+.food-image {
+   
+    flex: 1;
+    
+    
+
+}
+
+.food-image img {
+
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid gold;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
