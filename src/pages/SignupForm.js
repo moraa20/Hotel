@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { signup } from '../Utils/authApi'; // Import the signup function from authApi
 import '../Styles/SignupForm.css';
 
-const SignupForm = () => {
+const SignupForm = ({ onClose }) => {
   const [isFormVisible, setIsFormVisible] = useState(true);
   const formRef = useRef(null);
 
@@ -29,16 +30,19 @@ const SignupForm = () => {
       .required('Please confirm your password'),
   });
 
-  const handleSubmit = (values, { setSubmitting }) => {
-    setSubmitting(true);
-    // Placeholder for actual signup logic
-    console.log('Signing up', values);
-    // Simulate an API call
-    setTimeout(() => {
-      setSubmitting(false);
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const data = await signup(values);
+      console.log('Signup response:', data);
       alert('Signed up successfully!');
       setIsFormVisible(false);
-    }, 1000);
+      onClose();
+    } catch (error) {
+      console.error('Signup error:', error);
+      alert(error.message);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (

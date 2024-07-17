@@ -1,0 +1,59 @@
+/* Reviews.css */
+
+.reviews {
+    padding: 10px;
+    height: 60vh;
+    color: #fff;
+}
+
+.testimonials {
+    background-color: #000;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.review {
+    margin-bottom: 20px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.review p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+    
+}
+
+button {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: goldenrod;
+}

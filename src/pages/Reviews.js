@@ -1,23 +1,70 @@
-import React from "react";
-import aboutImage from '../assets/Images/about.jpg'
+// src/components/Reviews.js
+
+import React, { useState, useEffect } from 'react';
+import '../Styles/Reviews.css';
+import { getAllReviews, addReview } from '../Utils/reviewApi';
 
 function Reviews() {
+    const [reviews, setReviews] = useState([]);
+    const [name, setName] = useState('');
+    const [comment, setComment] = useState('');
+
+    useEffect(() => {
+        fetchReviews();
+    }, []);
+
+    const fetchReviews = async () => {
+        try {
+            const data = await getAllReviews();
+            setReviews(data);
+        } catch (error) {
+            console.error('Error fetching reviews:', error);
+        }
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const newReview = await addReview({ name, comment });
+            setReviews([...reviews, newReview]); // Update state with new review
+            setName('');
+            setComment('');
+        } catch (error) {
+            console.error('Error adding review:', error);
+        }
+    };
 
     return (
         <div className="reviews">
-
-            <section className="testimonials" /*style={{ backgroundImage: `url(${aboutImage})` }}*/>
-
+            <section className="testimonials">
                 <h2>Guest Reviews</h2>
-                <div className="review">
-                    <p>"Great experience! The staff was friendly and the room was fantastic."</p>
-                    <p>- John Doe</p>
-                </div>
-                <div className="review">
-                    <p>"Excellent food and ambiance. Will definitely visit again!"</p>
-                    <p>- Jane Smith</p>
-                </div>
-
+                {reviews.length === 0 ? (
+                    <p>No reviews yet.</p>
+                ) : (
+                    reviews.map((review) => (
+                        <div key={review._id} className="review">
+                            <p>"{review.comment}"</p>
+                            <p>- {review.name}</p>
+                        </div>
+                    ))
+                )}
+                <form onSubmit={handleSubmit}>
+                    <h3>Add Your Review</h3>
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                    <textarea
+                        placeholder="Your Review"
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
+                        required
+                    />
+                    <button type="submit">Submit Review</button>
+                </form>
             </section>
         </div>
     );

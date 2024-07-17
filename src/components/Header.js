@@ -1,9 +1,8 @@
 // src/components/Header.js
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../Styles/Header.css';
-import logo from '../assets/Images/logo.png';
 import UserMenu from '../pages/UserMenu';
 
 function Header() {
@@ -11,32 +10,21 @@ function Header() {
         <header className="header">
             <div className="header-container">
                 <div className="logo">
-                  {/*  <Link to="/">
-                        <img src={logo} alt="Logo" style={{ height: '100px' }} />
-                    </Link> */}
+                    {/* Logo here */}
                 </div>
-                <div style={{ marginRight:'auto' }}>
+                <div style={{ marginRight: 'auto' }}>
                     <UserMenu />
                 </div>
                 <nav className="nav">
                     <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About Us</Link></li>
-
-
-                        <li><Link to="/restaurant">Restaurant and Rooms</Link></li>
-                        <li><Link to="/offers">Special Offers</Link></li>
-
-                        <li><Link to="/contact">Contact Us</Link></li>
-                        <li><Link to="/Reviews">Guest Reviews</Link></li>
+                        <li><NavLink exact to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>Home</NavLink></li>
+                        <li><NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link' : '')}>About Us</NavLink></li>
+                        <li><NavLink to="/restaurant" className={({ isActive }) => (isActive ? 'active-link' : '')}>Restaurant and Rooms</NavLink></li>
+                        <li><NavLink to="/offers" className={({ isActive }) => (isActive ? 'active-link' : '')}>Special Offers</NavLink></li>
+                        <li><NavLink to="/contact" className={({ isActive }) => (isActive ? 'active-link' : '')}>Contact Us</NavLink></li>
+                        <li><NavLink to="/reviews" className={({ isActive }) => (isActive ? 'active-link' : '')}>Guest Reviews</NavLink></li>
                     </ul>
-
                 </nav>
-
-                {/* <div className="header-actions">
-                    <Link to="/login" className="btn">Login</Link>
-                    <Link to="/signup" className="btn btn-primary">Sign Up</Link>
-                </div> */}
             </div>
         </header>
     );

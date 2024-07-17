@@ -1,7 +1,15 @@
 .App {
   text-align: center;
   font-size: large;
-  margin: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 0;
+
+
+}
+
+.main {
+  background-color: black;
 }
 
 .App-logo {
@@ -48,16 +56,18 @@ h1 {
   font-size: 56px;
   font-weight: bold;
   color: gold;
-  
-  
+
+
 
 }
 
 
 body {
 
-  
+
   font-size: 1.5em;
   z-index: 1;
 
 }
+
+@import "~@fortawesome/fontawesome-free/css/all.css";

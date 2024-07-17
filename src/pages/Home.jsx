@@ -1,7 +1,7 @@
 // src/pages/Home.js
 
 import React from 'react';
-import Hero from '../components/Hero';
+
 import '../Styles/Home.css';
 
 import Restaurant from './Restaurant';
@@ -14,6 +14,7 @@ import Menu from './Menu';
 
 import AdminDashboard from '../pages/AdminDashboard';
 import StarRating from '../components/StarRating';
+
 
 
 function Home() {
@@ -29,6 +30,7 @@ function Home() {
             <Reviews />
             <StarRating totalStars={5} />
             <Contact />
+            
 
         </div>
     );

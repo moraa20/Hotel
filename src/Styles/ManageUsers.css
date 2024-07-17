@@ -1,0 +1,51 @@
+.user-booking{
+    padding-top: 180px;
+}
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid gold;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.error {
+    color: red;
+    margin-top: 20px;
+}

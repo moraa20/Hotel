@@ -1,63 +1,59 @@
 /* src/styles/Header.css */
 
 .header {
-    background-color: transparent;
-    padding: 0 50px;
-    
+    width: 100%;
+    padding: 50px 50px;
+    position:fixed;
+    height: 50px;
+    z-index: 1000;
+    background-color: rgb(1,0,0);
+
 }
-.user-menu{
-    padding:5px ;
+
+.user-menu {
+    padding: 5px;
     margin: 50px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    background-color:transparent;
+    align-items: center;
     flex: 1;
-    color: #000;
     margin: 0px;
-    
+
 
 }
 
 .logo img {
     max-height: 150px;
-   
+
 }
 
 .nav ul {
-    padding-right: 70px;
+    padding-right: 170px;
     list-style: none;
     display: flex;
     gap: 30px;
     padding-left: 0px;
-    
+    list-style-type: none;
+
 }
 
 .nav ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
-.nav ul li a:hover{
+
+.nav ul li a:hover {
     color: gold;
 }
-/*
-.header-actions .btn {
-    margin-left: 10px;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #000;
-    background-color:gold;
-    border-radius: 30px;
-    width: 300px;
+.nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
-.header-actions .btn-primary {
-    background-color: gold;
+.nav ul li .active-link {
+    color: gold; 
+    font-weight: bold; 
 }
-
-.header-actions .btn:hover {
-    background-color: whitesmoke;
-}*/

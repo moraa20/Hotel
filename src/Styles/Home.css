@@ -20,6 +20,7 @@
     height: 20vh;
     font-style: italic;
     margin-top: 80px;
+    color: #fff;
 
 
 }
@@ -27,21 +28,29 @@
 .contact {
     height: 30vh;
     font-style: italic;
+    color: white;
 
 
 }
 
 .about-us h2,
-.special-offers h2,
-.testimonials h2,
 .rooms h2,
-.restaurant h2,
+.restaurant h2 {
+    font-size: 1.5em;
+    font-style: italic;
+    font-size: xx-large;
+    border-bottom: 1px solid gold;
+}
+
+
+
+.testimonials h2,
 .contact h2 {
 
     font-size: 1.5em;
     font-style: italic;
     font-size: xx-large;
-    color: black;
+    color: white;
 
 
 }
@@ -70,28 +79,27 @@
 
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: #000;
     gap: 10px;
     margin-top: 30px;
     margin-bottom: 30px;
-
-
-
-
-
 }
 
 .about-container {
-    padding: 65px;
+    box-shadow: 0 0 10px gold;
+    border-radius: 20px;
+    text-align: start;
+    line-height: 1.5;
+    padding: 20px;
     flex: 1;
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #000;
     font-style: italic;
-    border-style: outset;
-    border-radius: 10px;
+
 }
 
 .special-offers {
+    color: #fff;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -110,13 +118,14 @@
 }
 
 .offers-container {
-    
+    background-color: #f5f5dc;
+    color: #000;
     flex: 1;
     font-style: italic;
     border-style: outset;
     border-radius: 10px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 52px;
+    padding-bottom: 40px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -130,7 +139,7 @@
 .hotel-image img {
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
 
 
 }
@@ -144,7 +153,7 @@
 
 .offer-image img {
     width: 100%;
-    height: 430px;
+    height: 415px;
     object-fit: cover;
     max-width: 100%;
     border-radius: 10px;
@@ -172,15 +181,15 @@
 }
 
 .my-restaurant {
-    background-color: white;
+    background-color: #f5f5dc;
     color: black;
     border-style: outset;
-    padding: 50px;
+    padding: 40px;
 
 }
 
 .my-rooms {
-    background-color: white;
+    background-color: #f5f5dc;
     color: black;
     border-style: outset;
     padding: 42px;

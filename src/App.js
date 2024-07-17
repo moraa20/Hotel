@@ -13,29 +13,34 @@ import About from './pages/About';
 import './App.css';
 import Contact from './pages/Contact';
 import Reviews from './pages/Reviews';
-
+import ManageBookings from './components/ManageBookings';
+import ManageUsers from './components/ManageUsers';
 
 
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/signup" element={<SignupForm />} />
-          <Route path="/restaurant" element={<Restaurant />} />
-          <Route path="/offers" element={<Offers />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Reviews" element={<Reviews />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <main className='main'>
+      <Router>
+        <div className="App">
+          <Header />
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/signup" element={<SignupForm />} />
+            <Route path="/restaurant" element={<Restaurant />} />
+            <Route path="/offers" element={<Offers />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Reviews" element={<Reviews />} />
+            <Route path="/manageBookings" element={<ManageBookings />} />
+            <Route path="/ManageUsers" element={<ManageUsers />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </main>
   );
 }
 

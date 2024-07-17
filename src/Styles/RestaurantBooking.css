@@ -1,0 +1,104 @@
+.restaurant-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #000;
+    flex-wrap: wrap;
+}
+
+.booking-section {
+    background: #000;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gold;
+    width: 45%;
+    min-width: 300px;
+}
+
+.booking-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.booking-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-section label {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.booking-section input,
+.booking-section select,
+.booking-section textarea {
+    color: #000;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: ivory;
+}
+
+.booking-section textarea {
+    resize: vertical;
+}
+
+.booking-section button {
+    padding: 15px;
+    background-color: gold;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.booking-section button:hover {
+    background-color: goldenrod;
+}
+
+.existing-bookings {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.existing-bookings h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.booking {
+    background: #000;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booking p {
+    margin: 0;
+    color: #fff;
+}
+
+.booking button {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: gold;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.booking button:hover {
+    background-color: goldenrod;
+}

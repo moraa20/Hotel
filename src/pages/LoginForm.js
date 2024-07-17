@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { login } from '../Utils/authApi'; // Import the login function from authApi
 import '../Styles/LoginForm.css';
 
-const LoginForm = () => {
+const LoginForm = ({ onClose }) => {
     const [isFormVisible, setIsFormVisible] = useState(true);
     const formRef = useRef(null);
 
@@ -25,16 +26,19 @@ const LoginForm = () => {
         password: Yup.string().min(6, 'Password must be at least 6 characters').required('Please enter your password'),
     });
 
-    const handleSubmit = (values, { setSubmitting }) => {
-        setSubmitting(true);
-        // Placeholder for actual authentication logic
-        console.log('Authenticating', values);
-        // Simulate an API call
-        setTimeout(() => {
-            setSubmitting(false);
+    const handleSubmit = async (values, { setSubmitting }) => {
+        try {
+            const data = await login(values);
+            console.log('Login response:', data);
             alert('Logged in successfully!');
             setIsFormVisible(false);
-        }, 1000);
+            onClose();
+        } catch (error) {
+            console.error('Login error:', error);
+            alert(error.message);
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     return (

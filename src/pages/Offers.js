@@ -1,37 +1,42 @@
-// src/pages/Offers.js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import '../Styles/Offers.css';
 
-import React from 'react';
-import offerImage from '../assets/Images/offerimage.jpg';
-import aboutImage from '../assets/Images/about.jpg'
+const Offers = () => {
+    const [offers, setOffers] = useState([]);
 
-function Offers() {
+    useEffect(() => {
+        const fetchOffers = async () => {
+            try {
+                const response = await axios.get('http://localhost:8082/api/offers');
+                setOffers(response.data);
+            } catch (error) {
+                console.error('Error fetching offers:', error);
+            }
+        };
+
+        fetchOffers();
+    }, []);
+
     return (
         <div className="offers">
-
-
-            <section className="special-offers" /*style={{ backgroundImage: `url(${aboutImage})` }}*/>
-                <div className="offers-container">
-                    <h2>Special Offers</h2>
-
-                    <div className="offer">
-                        <h3>Stay 3 Nights, Pay for 2</h3>
-                        <p>Valid until December 31, 2024</p>
-                        <p>Enjoy an extra night on us when you book a 3-night stay.</p>
-                    </div>
-                    <div className="offer">
-                        <h3>Dine with a View</h3>
-                        <p>Every Friday & Saturday</p>
-                        <p>Experience our rooftop dining with breathtaking city views.</p>
-                    </div>
+            <h2>Special Offers</h2>
+            {offers.length === 0 ? (
+                <p>No offers available</p>
+            ) : (
+                <div className="offers-list">
+                    {offers.map((offer) => (
+                        <div key={offer._id} className="offer">
+                            <h3>{offer.title}</h3>
+                            <p>Valid until {new Date(offer.validUntil).toLocaleDateString()}</p>
+                            <p>{offer.description}</p>
+                            <p>Type: {offer.type}</p>
+                        </div>
+                    ))}
                 </div>
-
-                <div className='offer-image'>
-                    <img src={offerImage} alt="Offer Image" />
-                </div>
-            </section>
-
+            )}
         </div>
     );
-}
+};
 
 export default Offers;
